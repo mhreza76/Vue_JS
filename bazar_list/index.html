@@ -18,19 +18,30 @@
 
     <div id="app" class="container">
         <div class="row">
-            <div class="col-md-4 content offset-md-4 alert alert-info">
-                <h3>Bazar List</h3>
+            <div class="col-md-4 col-sm-12 content offset-md-4 alert alert-info">
+                <h3 class="text-center">Bazar List</h3>
                 <form @submit.prevent="addItem">
-                    <input v-model="newItem" class="form-control"> //v-model two way data bainding
-                    {{ newItem}}
+                    <div class="row">
+                        <div class="col-md-9">
+                            <input class="form-control"  v-model="newItem"> <!-- v-model two way data bainding -->
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-success">Add</button>
+                        </div>
+                    </div>
                 </form>
 
                 <hr>
 
                 <ul class="list-group">
-                    <li v-for="item in items" class="list-group-item">
-                        {{ item.name }} - {{ item.price }}
+                    <li v-for="(item, index) in items" :key="index" class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-5">{{ item.name }}</div>
+                            <div class="col-md-4"> <input class="form-control" v-model="item.price"></div>
+                            <div class="col-md-2"> <button class="btn btn-xs btn-danger" @click="removeItem">remove</button> </div>
+                        </div>
                     </li>
+                    <li class="list-group-item ">Total: {{ total }}</li>
                 </ul>
             </div>
         </div>
