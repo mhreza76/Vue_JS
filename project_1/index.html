@@ -16,7 +16,14 @@
         <p> {{ cars[0] }} </p>
         <p > {{ robot.name }} </p>
         <p> {{ greetings() }} </p>
-        
+        <p> {{ testFunction() }}</p>
+
+<!--         need to use directives for attributes-->
+        <div class="col-md-4 m-auto">
+            <img v-bind:src="profile_img_src" v-bind:alt="img_alt">
+        </div>
+
+
     </div>
     <script src="app.js"></script>
 </body>

@@ -10,6 +10,13 @@ new Vue({
         } , //Object
         greetings: ()=>{
             return "Hi, greetings from Reza";
+        },   //function
+        profile_img_src: './reza_new_300_300.png',
+        img_alt : 'No image found',
+    },
+    methods: {
+        testFunction(){
+            return this.robot.name;
         }
     }
 });
