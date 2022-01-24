@@ -20,8 +20,11 @@
 
 <!--         need to use directives for attributes-->
         <div class="col-md-4 m-auto">
-            <img v-bind:src="profile_img_src" v-bind:alt="img_alt">
+            <img v-bind:src="profile_img_src" v-bind:alt="img_alt" class="w-100">
         </div>
+        <hr>
+        <p v-text="myText"></p>
+        <p v-html="myHtml"></p>
 
 
     </div>

@@ -11,8 +11,10 @@ new Vue({
         greetings: ()=>{
             return "Hi, greetings from Reza";
         },   //function
-        profile_img_src: './reza_new_300_300.png',
-        img_alt : 'No image found',
+        profile_img_src: './4760.jpg',
+        img_alt: 'No image found',
+        myText: 'simple texts with v-text bind',
+        myHtml: 'simple bold texts with <b>v-html</b> bind',
     },
     methods: {
         testFunction(){
