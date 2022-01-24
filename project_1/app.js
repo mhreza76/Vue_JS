@@ -15,10 +15,20 @@ new Vue({
         img_alt: 'No image found',
         myText: 'simple texts with v-text bind',
         myHtml: 'simple bold texts with <b>v-html</b> bind',
+
+        user: "Reza",
+        userAge: 24,
+        allowedAge: 13,
+
+
     },
     methods: {
         testFunction(){
             return this.robot.name;
+        },
+
+        changeUser(){
+            return this.user==="Reza" ? true : false;
         }
     }
 });
