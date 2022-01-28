@@ -34,7 +34,14 @@
 
 <!--        v-show is same as v-if, v-show render everything in dom but only show condition fulfilled section-->
 
-        
+        <p v-for="(value, key, index) in robot">
+            {{ index }} : {{ key }} : {{ value }}
+        </p>
+
+        <h3 class="text-center"> {{ user }}</h3>
+<!--        v-once used for render once only -->
+        <h3 class="text-center" v-once> {{ user }}</h3>
+        {{ changeUser() }}
 
     </div>
     <script src="app.js"></script>

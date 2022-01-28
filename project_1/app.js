@@ -28,7 +28,11 @@ new Vue({
         },
 
         changeUser(){
-            return this.user==="Reza" ? true : false;
-        }
+            setTimeout(()=>{
+                this.user = '------';
+            },2000)
+        },
+
+
     }
 });
