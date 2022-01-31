@@ -18,9 +18,10 @@
         <p> {{ greetings() }} </p>
         <p> {{ testFunction() }}</p>
 
-<!--         need to use directives for attributes-->
+<!--         need to use v-bind directives for attributes-->
         <div class="col-md-4 m-auto">
             <img v-bind:src="profile_img_src" v-bind:alt="img_alt" class="w-100">
+            <button v-on:click="changeImage" class="btn btn-primary" type="button"> Click </button>
         </div>
         <hr>
         <p v-text="myText"></p>
@@ -43,7 +44,27 @@
         <h3 class="text-center" v-once> {{ user }}</h3>
         {{ changeUser() }}
 
+        <form v-on:submit.prevent="handleForm">
+            <div class="form-group row pb-2">
+                <label  class="col-sm-2 col-form-label">First Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" v-model="formData.firstName" placeholder="First Name">
+                </div>
+            </div>
+            <div class="form-group row pb-2">
+                <label  class="col-sm-2 col-form-label">Last Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" v-model="formData.lastName" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-sm col-md-2">Submit</button>
+            </div>
+        </form>
+
     </div>
-    <script src="app.js"></script>
+
+
+<script src="app.js"></script>
 </body>
 </html>

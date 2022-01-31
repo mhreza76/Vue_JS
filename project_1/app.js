@@ -20,6 +20,11 @@ new Vue({
         userAge: 24,
         allowedAge: 13,
 
+        formData: {
+            firstName: '',
+            lastName: '',
+        },
+
 
     },
     methods: {
@@ -32,6 +37,18 @@ new Vue({
                 this.user = '------';
             },2000)
         },
+
+        changeImage(){
+            if(this.profile_img_src == './4760.jpg'){
+                this.profile_img_src = './flower.png';
+            }else{
+                this.profile_img_src = './4760.jpg';
+            }
+        },
+
+        handleForm(){
+            console.log(this.formData);
+        }
 
 
     }
