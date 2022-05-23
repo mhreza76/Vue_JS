@@ -24,8 +24,9 @@ new Vue({
             firstName: '',
             lastName: '',
         },
-
-
+        a: 0,
+        b: 0,
+        salary: 10,
     },
     methods: {
         testFunction(){
@@ -47,9 +48,20 @@ new Vue({
         },
 
         handleForm(){
+            console.log('handleForm');
             console.log(this.formData);
         }
 
-
+    },
+    computed: {
+        addToA(){
+            console.log('called addToA');
+            return this.a + this.salary;
+        },
+        addToB(){
+            console.log('called addToB');
+            return this.b + this.salary;
+        }
     }
+
 });
